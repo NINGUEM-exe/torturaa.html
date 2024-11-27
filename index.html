@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIBIRD - Jogo Online</title>
+  <style>
+    /* Reset de estilos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f2f2f2;
+      overflow-x: hidden; /* Impede o scroll horizontal */
+    }
+
+    /* Cabeçalho fixo e faixa de fundo */
+    header {
+      background-color: #D3D3D3; /* Mudando para cinza claro */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #ff6f61; /* Cor vermelho suave */
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ff6f61; /* Cor vermelho suave */
+    }
+
+    /* Faixa Azul onde ficam os botões */
+    .nav-bar {
+      background-color: #333;
+      width: 100%;
+      position: fixed;
+      top: 90px; /* Logo abaixo da faixa verde */
+      left: 0;
+      z-index: 101;
+      padding: 10px 0;
+    }
+
+    .nav-buttons {
+      text-align: right;
+      padding: 0 20px;
+    }
+
+    .nav-buttons a {
+      background-color: #1E3A8A; /* Faixa azul */
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      margin-left: 10px;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #1E40AF; /* Cor mais escura no hover */
+    }
+
+    /* Cores do fundo e efeito Parallax */
+    .parallax {
+      background-image: url('unibird-background.jpg'); /* Imagem de fundo */
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100vh;
+      color: white; /* Definir cor do texto para branco */
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .parallax h1 {
+      font-size: 60px;
+      color: #ff6f61; /* Cor vermelho suave */
+    }
+
+    .parallax p {
+      font-size: 24px;
+      margin-top: 15px;
+      color: #ff6f61; /* Cor vermelho suave */
+    }
+
+    /* Conteúdo Oculto para "Sobre" e "Galeria" */
+    .hidden-section {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Carrossel e Player de Música */
+    .carousel-container, .player-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .carousel-container {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Para quando o botão "Sobre" ou "Galeria" for clicado */
+    .visible {
+      display: block;
+    }
+
+    /* Botões de Download */
+    .button-download {
+      background-color: #000;
+      color: white;
+      font-size: 16px;
+      padding: 15px 40px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-download:hover {
+      background-color: #444;
+    }
+
+    /* Estilo para texto do Parallax */
+    .parallax h1, .parallax p {
+      color: #ff6f61; /* Texto vermelho suave */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho fixo -->
+  <header>
+    <h1>UNIBIRD</h1>
+    <p>O clássico jogo de habilidade! Toque na tela para ajudar o passarinho a se graduar!</p>
+  </header>
+
+  <!-- Faixa Azul com os botões de navegação -->
+  <div class="nav-bar">
+    <div class="nav-buttons">
+      <a href="sobre.html" id="btnSobre">Sobre</a> <!-- Redireciona para página "Sobre" -->
+      <a href="galeria.html" id="btnGaleria">Galeria</a> <!-- Redireciona para página "Galeria" -->
+    </div>
+  </div>
+
+  <!-- Fundo Parallax -->
+  <section class="parallax">
+    <h1>UNIBIRD</h1>
+    <p>Desafie suas habilidades e ajude o passarinho a se graduar!</p>
+  </section>
+
+  <!-- Seção de Download (Visível ao rolar para baixo) -->
+  <main>
+    <section id="download" style="text-align: center; margin-top: 100px;">
+      <h2>Jogue UNIBIRD</h2>
+      <p>Escolha sua plataforma para jogar:</p>
+      <a href="https://play.google.com/store/apps/details?id=com.dotgears.unibird" target="_blank" class="button-download">Baixar para Android</a>
+      <br>
+      <a href="https://apps.apple.com/us/app/uinbird/id625115090" target="_blank" class="button-download">Baixar para iOS</a>
+      <br>
+      <a href="unibird_windows.exe" class="button-download">Baixar para Windows</a>
+    </section>
+  </main>
+
+</body>
+</html>
